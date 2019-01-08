@@ -1,0 +1,26 @@
+{
+	"name": "google-passport-example",
+	"version": "0.0.1",
+	"description": "an example app implementing google oauth with passport",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server.js"
+	},
+	"dependencies": {
+		"body-parser": "^1.16.1",
+		"connect-ensure-login": "^0.1.1",
+		"cookie-parser": "^1.4.3",
+		"express": "^4.14.1",
+		"express-session": "^1.15.1",
+    "googleapis": "*"
+	},
+	"engines": {
+		"node": "6.9.1"
+	},
+	"keywords": [
+		"node",
+		"express",
+		"google",
+		"oauth"
+	]
+}
