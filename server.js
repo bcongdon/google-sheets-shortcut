@@ -1,6 +1,4 @@
-// server.js
-// where your node app starts
-var google = require('googleapis');
+var google = require('googleapis').google;
 var sheets = google.sheets('v4');
 var userName;
 var dataDeets;
@@ -16,7 +14,9 @@ var url = oauth2Client.generateAuthUrl({
   // 'online' (default) or 'offline' (gets refresh_token)
   access_type: 'offline',
   // If you only need one scope you can pass it as a string
-  scope: scopes
+  scope: scopes,
+  // Force getting a refresh token
+  prompt: 'consent'
 });
 
 // init project
