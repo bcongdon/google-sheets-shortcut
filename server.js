@@ -92,28 +92,6 @@ app.get('/success',
   }
 );
 
-// app.get('/getData',
-//   function(req, res) {
-//     // Now get spreadsheet values
-//     var request = {
-//       // The ID of the spreadsheet to retrieve data from.
-//       spreadsheetId: process.env.SHEET_KEY,
-//       // The A1 notation of the values to retrieve.
-//       range: 'A1:K11', 
-//       auth: oauth2Client
-//     };
-//     sheets.spreadsheets.values.get(request, function(err, response) {
-//       if (err) {
-//         console.log("Aww, man: " + err);
-//         res.send("An error occurred");
-//       } else {
-//         dataDeets = response.values;
-//         res.send([userName, dataDeets]);
-//       }
-//     });
-//   }
-// );
-
 app.post('/spreadsheet', function(req, res) {
   var body = req.body;
   if(body.secret_key !== process.env.SECRET_KEY) {
@@ -145,7 +123,6 @@ app.post('/spreadsheet', function(req, res) {
     })
 });
 
-// listen for requests :)
 var listener = app.listen(process.env.PORT, function() {
   console.log('Your app is listening on port ' + listener.address().port);
 });
